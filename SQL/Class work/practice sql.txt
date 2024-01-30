@@ -1,0 +1,7 @@
+create table changepond.payment _info
+(
+payment_id int(10) auto_increment primary key,
+payment type varchar2(20) not null,
+merchant_type varchar(10)
+created_dt datetime notnull
+)

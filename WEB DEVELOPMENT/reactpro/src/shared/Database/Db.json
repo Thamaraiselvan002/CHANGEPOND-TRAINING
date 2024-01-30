@@ -1,0 +1,9 @@
+{
+    "product":[
+        {"id":234, "pname":"laptop","price":59000,"pcompany":"HP" ,"Paddress":"pune"},
+        {"id":235, "pname":"mouse","price":2000,"pcompany":"dell" ,"Paddress":"mumbai"},
+        {"id":236, "pname":"keyboard","price":5000,"pcompany":"lenovo" ,"Paddress":"nagpur"},
+        {"id":237, "pname":"cable","price":1000,"pcompany":"sony" ,"Paddress":"nagpur"},
+        {"id":238, "pname":"USB","price":3456,"pcompany":"intel" ,"Paddress":"chennai"}
+    ]
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // arrays
+        let std=["shakthi","nikil","partha","sivanesh"]
+        console.log(std)
+        console.log("array length:" ,std.length)
+        console.log("array size :" ,std.length-1)
+        std[1]="NIKHIL"
+        console.log(std)
+        
+
+        // let s1=std[0],
+        // let s1=std[0],
+        // let s1=std[0],
+        // let s1=std[0],
+    //destructuring  array:fetch another index name to the array
+        const[s1,s2,s3,s4]=std;
+           console.log (s1);
+        
+    //object
+        let emp={
+            empid:23,
+            empname:"thamaraiselvan",
+            emprole:"developer",
+            empsal:50000,
+            empsingle:true
+        }
+        document.write("id is ",emp.empid,"name is ",emp.empname,"role is ",
+        emp.emprole,"salary is ",emp.empsal,"<br>")
+        document.write(`id is ${emp.empid},name is ${emp.empname},
+        salary is ${emp.empsal}<br>`)
+
+    //destructuring object
+        const {empid,empname,emprole,empsal,empsingle}=emp
+        document.write(empname," ",empsal ,"<br>")
+        // document.write(emp.empname," ",emp.empsal ,"<br>")
+    </script>
+</body>
+</html>

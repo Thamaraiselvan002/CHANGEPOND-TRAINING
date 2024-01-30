@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <script>
+            var a=parseInt(prompt("enter the starting year"))
+            var b=parseInt(prompt("enter the ending  year"))
+            for (var i=a;i<=b;i++){
+            if((i%4==0 && i%100!==0) || i%400==0){
+                document.write("this is the leap year--> "+ i +"<br>")
+            }
+            else{
+                document.write("this is not the leap year--> "+i +"<br>")
+            }
+        }
+        </script>
+    </body>
+</html>

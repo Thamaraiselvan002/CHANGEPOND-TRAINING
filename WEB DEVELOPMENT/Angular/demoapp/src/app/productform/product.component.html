@@ -1,0 +1,49 @@
+<div>
+    <h1 style="text-align: center;"><b >PRODUCT FORM</b></h1>
+    <form class="container bg-info col-sm-5" style="border: 5px solid black; border-radius:5px"
+    [formGroup]="dolak" (ngSubmit)="addproduct()">
+        <div class="container" style="font-weight: bold;" >
+            <label for="product_name">Product Name:</label>&nbsp;&nbsp;
+            <input type="text" name="product_name" id="product_name" formControlName="P_name">
+            <div *ngIf="(!dolak.controls.P_name.valid) && (dolak.controls.P_name.dirty || dolak.controls.P_name.touched)" class="alert alert-danger">
+                product Name is required
+              </div>
+        </div><br>
+        <div class="container" style="font-weight: bold;">
+            <label for="product_id">Product ID:</label>&nbsp;&nbsp;
+            <input type="number" name="product_id" id="product_id" formControlName="p_id">
+            <div *ngIf="(!dolak.controls.p_id.valid) && (dolak.controls.p_id.dirty || dolak.controls.p_id.touched)" class="alert alert-danger">
+                product ID  is required
+              </div>
+        </div><br>
+        <div class="container" style="font-weight: bold;">
+            <label for="description">Product Description:</label>&nbsp;&nbsp;
+            <textarea name="description" id="description" formControlName="description"></textarea>
+        </div><br>
+        <div class="container" style="font-weight: bold;">
+            <label for="price">Product Price:</label>&nbsp;&nbsp;
+            <input type="number" name="price" id="price" formControlName="price">
+            <div *ngIf="(!dolak.controls.price.valid) && (dolak.controls.price.dirty || dolak.controls.price.touched)" class="alert alert-danger">
+                product price above Rs.1 to Rs.10000
+              </div>
+        </div><br>
+        <div class="container" style="font-weight: bold;">
+            <label for="quantity">Product Quantity:</label>&nbsp;&nbsp;
+            <input type="number" name="quantity" id="quantity" formControlName="quantity">
+        </div><br>
+        <div class="container" style="font-weight: bold;">
+            <label for="availability">Product Availability:</label>&nbsp;&nbsp;
+            <input type="radio" name="availability" id="availabilityYes" formControlName="availability" value="YES">YES &nbsp;&nbsp;
+            <input type="radio" name="availability" id="availabilityNo" formControlName="availability" value="NO">NO
+        </div><br>
+        <div class="container" style="font-weight: bold;">
+            <label for="image">Product Image:</label>&nbsp;&nbsp;
+            <input type="file" name="file" formControlName="file">
+        </div>
+        
+        <div class="col-sm-6"></div>
+        <div style="font-weight: bold; text-align: center;">
+            <button class="btn btn-success" type="submit" (click)="addproduct()">Submit</button>
+        </div>
+    </form>
+</div>

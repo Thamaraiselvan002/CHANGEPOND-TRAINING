@@ -1,0 +1,64 @@
+<htmL>
+    <head>
+        <title>js function</title>
+    </head>
+    <body>
+        <h1 id="d1"></h1>
+        <script>
+        //simple function
+            function simple(){
+                // document.write("Good morning")
+                // console.log("Good morning")
+                // window.alert("zzGood morning")
+                document.getElementById("d1").innerHTML="Good morning"
+            }
+            simple();
+        //parametrise funcion
+            function welcome( ){
+                return"welcome a board"
+            }
+            let data=welcome();
+            document.write(data+ "<br>"); 
+         //in parameter
+            function welcome(std1,std2 ){
+                //return "welcome a board  "+ std1+" "+ std2;
+                return `welcome a board  ${std1} ${std2}`;//this is another way to write
+            }
+            let data1=welcome("nikhil" ,"sivanesh");
+            document.write(data1 + "<br>");
+        //anonymos function
+            let add =function (){
+                return 10+20
+            }
+            document.write(add() , "<br>");
+        //anonymous function with parameter
+            let add1 =function (n1,n2){
+                return n1+n2
+            }
+            document.write(add1(37,50) , "<br>");
+        //arrow function
+            let sub=( )=>{
+                return 70-97
+            }
+            document.write(sub() , "<br>");
+        //arrow function with parameter
+            let sub1=(a1,a2 )=>{
+                return a1-a2
+            }
+            document.write(sub1(60,78) , "<br>");
+        //arrow function single line
+            let multiply=(c1,c2)=>c1*c2
+            document.write(multiply(6,7) , "<br>");
+        //optional paarmaterise function:in this function parameter will be optional
+            var fullname=(fname,mname,lname="")=>{
+                return `${fname} ${mname}  ${lname}`;
+            }
+            document.write( "<br>",fullname("thamaraiselvan","s") );
+        //restion parameter function:when we dont know how many paarmeters are required in that case we use spread operator(...)
+            let stdlist=(...std)=>{
+                return std;
+            }
+            document.write("<br>",stdlist("nikhil","partha","sivanesh","santhosh"));
+        </script>
+    </body>
+</htmL>

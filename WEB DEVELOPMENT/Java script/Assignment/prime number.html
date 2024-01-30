@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <script>
+            var a=parseInt(prompt("enter the starting num"))
+            var b=parseInt(prompt("enter the ending num"))
+            var count=0
+            for(j=a;j<=b;j++)
+            {
+            for( i=1;i<=j;i++)
+            {
+             if(j%i==0)
+             count++
+            }
+            if(count==2)
+            document.write("this is  the prime numbers"+j +"<br>")
+             count=0
+            }
+            /*for(var i=1;i<100;i++){
+                var primeflag=1
+            }
+            for (var j=2;j<=i;j++){
+                if (i%j==0){
+                    primeflag=0
+                    break
+                }
+                if(primeflag==1){
+                    document.write("prime num"+j)
+                }
+            }*/
+        </script>
+    </body>
+</html>

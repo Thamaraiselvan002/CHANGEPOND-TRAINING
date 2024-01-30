@@ -1,0 +1,181 @@
+<html>
+<head>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 4fr; 
+            gap: 4px;
+            border-radius: 5px;
+        }
+
+        header {
+            grid-column: 1 / span 2; 
+            background-color: black;
+        }
+
+        #h1{
+            color: white;
+        }
+
+        .head{
+            color: white;
+            display: inline;
+            margin-right: 50px;
+        }
+
+        .sidebar {
+            grid-row: span 4;
+            display: grid;  
+            background-color: #c8d396;
+            padding: 10px;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        .side {
+            height: 190px;
+            background-color: white;
+            margin: 5px;
+            text-align: center;
+        }
+
+        nav {
+            grid-column: 2; 
+            display: grid;
+            background-color: #93baec;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .md{
+            color: white;
+        }
+
+        article {
+            grid-column: 2; 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 15px;
+            background-color:#4b484e;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        #para{
+            text-align: left;
+        }
+
+        footer {
+            grid-column: 1 / span 2; 
+            background-color: black;
+            text-align: center;
+        }
+
+        h5{
+            color: white;
+        }
+
+        .card {
+            height: 200px;
+            background-color: white;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <div>
+                <p id="h1"><b>&emsp;&emsp;&emsp;&emsp;Header Logo</b> 
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;header link 1
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;header link 2
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;header link 3
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;header link 4</p>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <div class="side" ><br>placeholder for image</div>
+            <div class="side"><br>Box 1</div>
+            <div class="side"><br>Box 2</div>
+            <div class="side"><br>Box 3</div>
+        </aside>
+
+        <nav>
+            <div class="md">&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;
+            LATEST ARTICLE &emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;
+             MOST VIEWED&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;
+             FEATURED</div>     
+        </nav>
+
+        <article>
+            <div class="card"><br><b>Article Title</b>
+                <p>
+                    Lorem ipsum dolor sit amet,consectetur adisping elit,sed do eisumed tempor inicident ut labore et dolore magna aliqua.Ut enim ad minim veniam quia nostad...
+                </p>
+            </div>
+            <div class="card"><br><b>Article Title</b>
+                <p>
+                    Lorem ipsum dolor sit amet,consectetur adisping elit,sed do eisumed tempor inicident ut labore et dolore magna aliqua.Ut enim ad minim veniam quia nostad...
+                </p>
+            </div>
+            <div class="card"><br><b>Article Title</b>
+                <p>
+                    Lorem ipsum dolor sit amet,consectetur adisping elit,sed do eisumed tempor inicident ut labore et dolore magna aliqua.Ut enim ad minim veniam quia nostad...
+                </p>
+            </div>
+            <div class="card"><br><b>Article Title</b>
+                <p>
+                    Lorem ipsum dolor sit amet,consectetur adisping elit,sed do eisumed tempor inicident ut labore et dolore magna aliqua.Ut enim ad minim veniam quia nostad...
+                </p>
+            </div>
+            <div class="card"><br><b>Article Title</b>
+                <p>
+                    Lorem ipsum dolor sit amet,consectetur adisping elit,sed do eisumed tempor inicident ut labore et dolore magna aliqua.Ut enim ad minim veniam quia nostad...
+                </p>
+            </div>
+            <div class="card"><br><b>Article Title</b>
+                <p>
+                    Lorem ipsum dolor sit amet,consectetur adisping elit,sed do eisumed tempor inicident ut labore et dolore magna aliqua.Ut enim ad minim veniam quia nostad...
+                </p>
+            </div>
+            <div class="card"><br><b>Article Title</b>
+                <p>
+                    Lorem ipsum dolor sit amet,consectetur adisping elit,sed do eisumed tempor inicident ut labore et dolore magna aliqua.Ut enim ad minim veniam quia nostad...
+                </p>
+            </div>
+            <div class="card"><br><b>Article Title</b>
+                <p>
+                    Lorem ipsum dolor sit amet,consectetur adisping elit,sed do eisumed tempor inicident ut labore et dolore magna aliqua.Ut enim ad minim veniam quia nostad...
+                </p>
+            </div>
+            <div class="card"><br><b>Article Title</b>
+                <p>
+                    Lorem ipsum dolor sit amet,consectetur adisping elit,sed do eisumed tempor inicident ut labore et dolore magna aliqua.Ut enim ad minim veniam quia nostad...
+                </p>
+            </div>
+            <div class="card"><br><b>Article Title</b>
+                <p>
+                    Lorem ipsum dolor sit amet,consectetur adisping elit,sed do eisumed tempor inicident ut labore et dolore magna aliqua.Ut enim ad minim veniam quia nostad...
+                </p>
+            </div>
+            <div class="card"><br><b>Article Title</b>
+                <p>
+                    Lorem ipsum dolor sit amet,consectetur adisping elit,sed do eisumed tempor inicident ut labore et dolore magna aliqua.Ut enim ad minim veniam quia nostad...
+                </p>
+            </div>
+            <div class="card"><br><b>Article Title</b>
+                <p>
+                    Lorem ipsum dolor sit amet,consectetur adisping elit,sed do eisumed tempor inicident ut labore et dolore magna aliqua.Ut enim ad minim veniam quia nostad...
+                </p>
+            </div>
+        </article>
+
+        <footer>
+            <h5>Copyright &copy; The Odin Project 2021</h5>
+        </footer>
+        
+    </div>
+</body>
+</html>

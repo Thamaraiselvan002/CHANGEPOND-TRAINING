@@ -1,0 +1,27 @@
+<div>
+    <div class="submit form">
+        <div class="form-group">
+            <label for="fname">product name:</label>
+            <input type="text" for="fname"  id="pname" class="form-control" 
+            name="pname" required {(ngmodel)}="product.pname"/>
+        </div>
+        <div class="form-group">
+            <label for="pdesc">product description:</label>
+            <textarea for="pdesc"  id="pdesc" class="form-control" 
+            name="pdesc" required {(ngmodel)}="product.pdesc"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="price">product price:</label>
+            <input type="number" for="price"  id="price" class="form-control" 
+            name="price" required {(ngmodel)}="product.price"/>
+        </div>
+        <div class="form-group">
+            <label for="instock">product instock:</label>
+            <input type="number" for="instock"  id="instock" class="form-control" 
+            name="instock" required {(ngmodel)}="product.instock"/>
+            <div >
+                <button class="btn btn-success" type="submit"  (click)="saveproduct()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

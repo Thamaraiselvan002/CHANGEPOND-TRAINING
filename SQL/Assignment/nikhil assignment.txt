@@ -1,0 +1,104 @@
+
+AALOWANCE TABLE:
+
+SELECT * FROM assignment1.allowance;
+
+INSERT INTO `assignment1`.`allowance`
+(`allow_type`,
+`allow_percent`)
+VALUES
+('ta',15),('da',22),('hra',12),('bonus',50);
+
+....................................................
+call getallowance(10000,@allowance);
+select @allowance;
+
+call getdeduction(10000,@total_deduction);
+select @total_deduction;
+.......................................................
+
+
+getdeduction
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getdeduction`(
+in salary bigint,
+out total_deduction bigint)
+BEGIN
+declare finished int default 0;
+declare t_deduction bigint default 0;
+
+declare curForName cursor for select deduction_percent  from deduction;
+declare continue handler for not found set finished=1;
+
+
+set total_deduction=0;
+open curForName;
+
+getdeduction:loop
+fetch curForName into t_deduction;
+if finished=1 then leave getdeduction;
+end if;
+set total_deduction = (0.12 * salary) + (0.02 * salary) + (0.05 * salary);
+end loop getdeduction;
+close curForName;
+
+END
+
+.....................................................................
+
+get allowance
+
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getallowance`(
+in salary bigint,
+out total_allowance bigint)
+BEGIN
+declare finished int default 0;
+declare allowance bigint default 0;
+
+declare curForName cursor for select allow_percent  from allowance;
+declare continue handler for not found set finished=1;
+
+
+set total_allowance=0;
+open curForName;
+
+getallowance:loop
+fetch curForName into allowance;
+if finished=1 then leave getallowance;
+end if;
+set total_allowance=(salary*(allowance/100))+total_allowance;
+end loop getallowance;
+close curForName;
+
+END
+
+............................................................
+create table Tax_computation(
+emp_no int,
+basic_salary bigint,
+total_allowance bigint,
+total_deduction bigint);
+
+
+CREATE TABLE `employees` (
+  `emp_no` int NOT NULL,
+  `birth_date` date NOT NULL,
+  `first_name` varchar(14) NOT NULL,
+  `last_name` varchar(16) NOT NULL,
+  `gender` enum('M','F') NOT NULL,
+  `hire_date` date NOT NULL,
+  PRIMARY KEY (`emp_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `salaries` (
+  `emp_no` int NOT NULL,
+  `salary` int NOT NULL,
+  `from_date` date NOT NULL,
+  `to_date` date NOT NULL,
+  PRIMARY KEY (`emp_no`,`from_date`),
+  CONSTRAINT `salaries_ibfk_1` FOREIGN KEY (`emp_no`) REFERENCES `employees` (`emp_no`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

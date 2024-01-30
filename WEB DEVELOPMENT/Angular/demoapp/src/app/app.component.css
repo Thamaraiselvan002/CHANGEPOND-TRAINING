@@ -1,0 +1,15 @@
+/* li{
+    display: inline-flex;
+    float: left;
+    list-style-type:none;
+    padding: 8px;
+}
+li a:hover{
+    background-color: brown;
+    color: white;
+}
+.nav{
+    background-color: aquamarine;
+    margin-top: 10px;
+    height: 35px;
+} */

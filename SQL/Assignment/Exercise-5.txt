@@ -1,0 +1,11 @@
+5.1 select name from pieces;
+5.2 select * from providers;
+5.3 select piece, avg(price) from provides group by piece;
+5.4 select p.name from providers as p join provides as pr on p.code=pr.provider where pr.piece=1;
+5.5 select Pi.Name from Pieces as Pi join Provides as Pr on Pi.Code = Pr.Piece where Pr.Provider = 'HAL';
+5.6 select p.name,pro.name,price from pieces p,providers pro,provides po where p.code=po.piece 
+    and po.provider=pro.code and price in (select max(price) from provides where piece=p.code);
+5.7 insert into provides values('1','TNBC',7);
+5.8 update provides set price = price +1;
+5.9 delete from provides where provider='RBT' and piece=4; 
+5.10 delete from provides where provider='RBT';

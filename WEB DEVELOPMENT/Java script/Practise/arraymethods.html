@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // array methods
+        let a=[1,2,3,4,5,6,7,8,9,10]
+        document.write(`the orginal array is :${a} <br>`)
+        a.push(11)
+        document.write(`the push 11 in the orginal array ${a} <br>`)
+        a.pop()
+        document.write(`the pop in the orginal array ${a} <br>`)
+        a.unshift(0.1,0.2)
+        document.write(`the unshift in the orginal array ${a} <br>`)
+        a.shift()
+        document.write(`the shift in the orginal array ${a} <br>`)
+        a.splice(2,0,"tham","sara")
+        document.write(`splice the index 2 and add the 2 element from given in the orginal array ${a} <br>`)
+        a.splice(2,2)
+        document.write(`splice the  2nd index to remove the 2 element in the orginal array ${a} <br>`)
+        
+        document.write(`the splice in the orginal array ${a.toString()} <br>`)
+        document.write(`the splice in the orginal array ${a.join("*")} <br>`)
+        document.write(`the splice in the orginal array ${a.join(" ")} <br>`)
+
+    //join json server:it s used to object into json server
+        var emp1=[{id:23,empname:"tham",empsal:35000,gender:"male"},
+        {id:22,empname:"nikhil",empsal:40000,gender:"female"},
+        {id:23,empname:"partha",empsal:45000,gender:"male"},
+        {id:24,empname:"sivanesh",empsal:20000,gender:"male"},
+        {id:25,empname:"karthick",empsal:50000,gender:"female"},
+        {id:26,empname:"vignesh",empsal:35000,gender:"male"},
+        {id:27,empname:"sara",empsal:10000,gender:"male"},
+        {id:28,empname:"santhosh",empsal:30000,gender:"female"},
+         ]
+        //convert object into string 
+         let jsonData=JSON.stringify(emp1);
+         console.log(jsonData)
+
+         //string to object
+         let jsondata1=JSON.parse(jsonData)
+         console.log(jsondata1)
+
+         
+    </script>
+</body>
+</html>

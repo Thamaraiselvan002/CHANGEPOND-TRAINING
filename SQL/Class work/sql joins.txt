@@ -1,0 +1,38 @@
+
+
+
+1. Find the number of Male (M) and Female (F) employees in the database and order the counts in descending order
+2. Display the month and total hires for the month with the most hires from the table employee
+3. # Retrieve list of all female employees whose first name is either 'Kellie' or 'Aruna'
+4. # Select names of all departments between department numbers d003 and d006
+5. # Select employee numbers of all individuals who have signed more than one contract after 2000-01-01
+6. # Select all female employees in the the year 2000 or after
+7. Find the average salary by employee title, round to 2 decimal places and order by descending order.
+8. Find all the employees that have worked in at least 2 departments. Show their first name, last_name and the number of departments they work in. Display all results in ascending order.
+9. Display the first name, last name, and salary of the highest payed employee.
+10. Display the first name, last name, and salary of the  highest payed employee.
+11. Display each department and the age of the youngest employee at hire date.
+12. Find all the employees that do not contain vowels in their first name and display the department they work in.
+
+
+1. select gender, count(gender) from employees group by gender order by gender desc ;
+
+3. select * from employees  where gender like 'F' and ( first_name = 'kellie' or first_name= 'aruna');
+
+
+4. select dept_name  from departments where dept_no between 'd003' and 'd006';
+
+7 select t.title,round (avg(salary),2) as  avg_salary from titltes t inner join salaries on s.emp_no group by t.title order by avg salary desc;
+
+8.select e.first_name,e.last_name,count(d.dept_no) from employees a join on dept_emp de on e.emp_no=d.emp_no group by de.emp_no having count(de.dept_no) >= 2 order by name asec;
+
+11.SELECT DEPT.DEPT_NAME,MIN(TIMESTAMP DIFF(YEAR,E.BIRTH_DATE,T.HIRE_DATE)) AS AGE_HIRE_DATE FROM EMPLOYEES E JOIN DEPT_EMP D ON E.EMP_NO=D.EMP_NO JOIN DEPARTMENTS DEPT ON D_EMP.DEPT_NO=DEPT.DEP_NO GROUP BY DEPT.DEPT_NAME;
+
+ 12.SELECT E.FIRST_NAME ,DEPT.DEPT_NMAE FROM EMPLOYEES E
+JOIN DEPT_EMP DE ON E.EMP_NO= DE.EMP_NO
+ JOIN DEPARTMENTS DEPT ON DE.DEPT_NO = DEPT.DEPT_NO
+ AND E.FIRST_NAME NOT LIKE '%a%'
+ AND E.FIRST_NAME NOT LIKE '%E%'
+ AND E.FIRST_NAME NOT LIKE '%I%'
+ AND E.FIRST_NAME NOT LIKE '%O%'
+ AND E.FIRST_NAME NOT LIKE '%U%'

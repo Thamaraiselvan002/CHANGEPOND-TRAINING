@@ -1,0 +1,290 @@
+Que 1. To use observables, Angular uses a third-party library called . . . . . . .
+Choose any one option
+a) ng2-bootstrap
+b) angular-cli
+c) numeral
+d) Reactive Extensions (RxJS)--
+Que 2. There can be more than one <router-outlet> element in angular application
+Choose any one option
+a) TRUE--
+b) FALSE
+Que 3. The . . . . . . . . . directive substitutes the normal href property and makes it easier to work with route links in Angular 2. Moreover if we want to navigate between routes, we use the . . . . . . . . . . . directive.
+Choose any one option
+a) RouterAngle
+b) RouterLink--
+c) RouterState
+d) RouterOutlet
+Que 4. How would you display a list of Employees on a webpage along with where they were in the list_
+Choose any one option
+a) Loop through and print the index
+b) Loop through and print the employees
+c) Loop through and print the index and the employee--
+d) Pass both the index and the employee to a web service
+Que 5. HTTP service_s get/put/post/delete function returns
+Choose any one option
+a) object of type ?any?
+b) Json data
+c) Observable---
+d) callback function
+Que 6. Custom pipe can modify actual value of variable apart from different presention in HTML.
+Choose any one option
+a) TRUE
+b) FALSE--
+Que 7. Which of the following is not built-in pipe in Angular_
+Choose any one option
+a) DatePipe
+b) CurrencyPipe--
+c) DataPipe
+d) PercentPipe
+Que 8. What does AOT stand for_
+Choose any one option
+a) ahead-of-time compilation--
+b) Angular Object Templates
+c) apply-of-time compilation
+d) All of the above.
+Que 9. The . . . . . . . . . . directive is used to display views for a given route.
+Choose any one option
+a) RouterAngle
+b) RouterAngle
+c) RouterState
+d) RouterOutlet--
+Que 10. RxJS can be used for_
+Choose any one option
+a) Browser
+b) Server Side
+c) Both---
+d) None of above
+Que 11. Below component represent _target/host_ DOM element inside Directive_s constructor
+Choose any one option
+a) element
+b) elementref--
+c) target
+d) host
+Que 12. HTTP service is called even if observer doesn_t have _subscribe_ method
+Choose any one option
+a) TRUE
+b) FALSE---
+Que 13. Binding types such as Interpolation, Property, Attribute, Class and Style support . . . . . . data flow from the data source (exposed from the component) to a view or template.
+Choose any one option
+a) one-way--
+b) two-way
+c) both-ways
+d) three-way
+Que 14. There are four different guard types we can use to protect our routes, one of these is
+Choose any one option
+a) CanStart
+b) CanActivate---
+c) CanNavigate
+d) CanStop
+Que 15. Which of the following can be used to run unit tests_
+Choose any one option
+a) Karma
+b) Protactor
+c) Jasmine
+d) All of the above.---
+Que 16. Router is part of @angular/core_
+Choose any one option
+a) Yes
+b) No---
+Que 17. _Which of the following is not a hook application life cycle_
+Choose any one option
+a) ngOnChanges
+b) ngViewStart---
+c) ngOnInit
+d) ngAfterViewInit
+Que 18. Command use to add dependency in package.json
+Choose any one option
+a) npm add dependency name
+b) npm add dependency name---------
+c) npm add dependency name --save
+d) All of the above.
+Que 19. A component can have child route defined using below property
+Choose any one option
+a) routes---
+b) children
+c) rotercollection
+d) None of above
+Que 20. What is .subscribe_
+Choose any one option
+a) Streams data in asynchronously
+b) Streams data in synchronously
+c) Both---
+d) None of above
+Que 21. Below command is used to run Static Code analysis of Angular application
+Choose any one option
+a) ng build
+b) ng profile
+c) ng lint
+d) ng serve--
+Que 22. A directive which modifies DOM hierarchy is called
+Choose any one option
+a) Structural directive--
+b) Attribute Directive
+c) Component Directive
+d) None of above
+Que 23. What is the decorator used for configuring your module class_
+Choose any one option
+a) @NgModule--
+b) @NgApp
+c) Both
+d) None of above
+Que 24. Using below wild card we can define page not found route
+Choose any one option
+a) *
+b) **---
+c) 404
+d) ~^
+Que 25. Which of the following is correct about TypeScript_
+Choose any one option
+a) Angular is based on TypeScript.?
+b) This is a superset of JavaScript
+c) TypeScript is maintained by Microsoft.
+d) All of the above.---
+Que 26. In Angular, you can pass data from parent component to child component using...
+Choose any one option
+a) Output
+b) Input---
+c) "@Output
+d) "@Input
+Que 27. Which of the following can be used to run end-to-end tests_
+Choose any one option
+a) Karma
+b) Protactor---
+c) Jasmine
+d) All of the above.
+Que 28. If you provide a custom service in two components_ _providers_ section of @Component decorator, how many instances of service shall get created_
+Choose any one option
+a) 4
+b) 3
+c) 2---
+d) 1
+Que 29. Select correct form control class name which is set to true via [(ngModel)] whenever value is modified
+Choose any one option
+a) ng-pristine
+b) ng-dirty
+c) ng-invalid---
+d) ng-pending
+Que 30. Router is part of which of the following module_
+Choose any one option
+a) @angular/core
+b) @angular/router---
+c) "@angular/common/router
+d) None of above
+Que 31. It is recommended to write isolated unit tests for which of the following_
+Choose any one option
+a) Services
+b) Components
+c) Pipes---
+d) All of the above.
+Que 32. To use HttpClient component you need to import below module
+Choose any one option
+a) HttpModule
+b) HttpClientModule---
+c) Http
+d) None of above
+Que 33. We need to call below method of RouterModule for providing all routes in AppModule
+Choose any one option
+a) RouterModule.forChild
+b) RouterModule.forRoot---
+c) RouterModule
+d) RouterModule.import
+Que 34. _Angular provides a special version of the standard property binding, known as the . . . . . . . . ., that is used to include expression results in the text content of host elements.
+Choose any one option
+a) string extrapolation binding
+b) evaluation binding
+c) crypto binding
+d) string interpolation binding---
+Que 35. In Angular 2 . . . . . . . . directive allows us to iterate through a collection.
+Choose any one option
+a) ngRepeat---
+b) ngWhile
+c) ngFor
+d) ngIf
+Que 36. Which of the below syntax will clone and inject pieces of templated HTML snippets in the markup, removing it from the DOM when the condition evaluates to false.
+Choose any one option
+a) *ngIf="conditional"---
+b) [hidden]="conditional"
+c) ngIf*="conditional"
+d) None of above
+Que 37. Which of the following is not a hook in Angular 2 application life cycle
+Choose any one option
+a) ngOnChanges
+b) ngOnInit
+c) ngAfterViewInit
+d) ngViewStart---
+Que 38. Observer sends data to multiple clients via below method
+Choose any one option
+a) send()
+b) next()
+c) emit()
+d) publish()----
+Que 39. Which of the following TestBed method is used to create an Angular component under test_
+Choose any one option
+a) createComponent
+b) createTestingComponent
+c) configureComponent
+d) configureTestingComponent---
+Que 40. Data bindings are applied as . . . . . . . . or as special sequences of characters in strings.
+Choose any one option
+a) expressions
+b) attributes on HTML elements---
+c) elements itself
+d) All of the above.
+Que 41. Directive can listen to host/target events using below decoarator
+Choose any one option
+a) "@Listener
+b) "@HostListener----
+c) "@TargetListener
+d) None of above
+Que 42. We can subscribe to an observable using the . . . . . . . . The benefit of this is that Angular deals with your subscription during the lifecycle of a component. Angular will automatically subscribe and unsubscribe for you
+Choose any one option
+a) In Angular 2 . . . . . . . . directive allows us to iterate through a collection.
+b) async pipe
+c) sync var---
+d) async var
+Que 43. Which of the following will need Angular testing utilities for unit testing_
+Choose any one option
+a) Services
+b) Components
+c) Pipes
+d) All of the above.---
+Que 44. The . . . . . . . . . . . . is a highly configurable and feature packed router. Features included are standard view routing, nested child routes, named routes, and route parameters.
+Choose any one option
+a) Distinctive Router
+b) Component Router
+c) Angular Router----
+d) Creative Router
+Que 45. Which angular decorator allows us to define the pipe name that is globally available for use in any template in the across application_
+Choose any one option
+a) pipeName
+b) pipeDeco
+c) Pipe
+d) None of above----
+Que 46. It contains the information about a route associated with a component loaded in an outlet. An . . . . . . . . . . can also be used to traverse the router state tree.
+Choose any one option
+a) ActivatedRoute
+b) NavigationRoute----
+c) NavigateRoute
+d) ActiveRoute
+Que 47. To build application in production mode, use below command
+Choose any one option
+a) ng build
+b) ng serve
+c) ng build --prod---
+d) ng test
+Que 48. Router service needs to be explicitly provided in angular module to use it in other component via DI (Dependency Injection)
+Choose any one option
+a) TRUE
+b) FALSE---
+Que 49. Which character is used for chaining multiple pipes_
+Choose any one option
+a) |
+b) -
+c) Both------
+d) None of above
+Que 50. How Observables are Used_
+Choose any one option
+a) The Reactive Forms Module uses reactive programming and Observables for listening to user input------
+b) The @output() decorator in a component takes an EventEmitter instance. EventEmitter is a subclass of the RxJS Observable
+c) Both
+d) None of above

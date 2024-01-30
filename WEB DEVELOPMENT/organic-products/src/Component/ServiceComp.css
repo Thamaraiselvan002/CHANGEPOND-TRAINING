@@ -1,0 +1,82 @@
+.review1{
+    border: 1px double rgb(241, 64, 123);
+    padding: 10px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.review2{
+    border: 1px double green;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 50px;
+    margin-right: auto;
+    cursor: pointer;
+}
+.review3{
+    border: 1px double rgb(56, 108, 206);
+    padding: 10px;
+    margin: 10px;
+    margin-left: 50px;
+    margin-right: auto;
+    cursor: pointer;
+}
+.review4{
+    border: 1px double rgb(219, 233, 20);
+    padding: 10px;
+    margin: 10px;
+    margin-left: 50px;
+    margin-right: auto;
+    cursor: pointer;
+}
+.review5{
+    border: 1px double rgb(228, 24, 228);
+    padding: 10px;
+    margin: 10px;
+    margin-left: 50px;
+    margin-right: auto;
+    cursor: pointer;
+}
+.review6{
+    border: 1px double rgb(58, 20, 226);
+    padding: 10px;
+    margin: 10px;
+    margin-left: 50px;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.partha{
+    align-items: center;
+    text-align: justify;
+    cursor: pointer;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+}
+.list-unstyled{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.nav_a{
+    text-decoration: none;
+    font-size: medium;
+    color: black;
+}
+.col-sm-4{
+    color: rgb(224, 55, 55);
+}
+h1{
+   
+    white-space: nowrap;
+    animation:  5s infinite alternate ease-in-out;
+}
+.navbar{
+    background-color: rgb(240, 226, 207);
+    border: 2px solid rgb(71, 71, 71) ;
+    border-left-width: 15px;
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-top: 5px;
+}

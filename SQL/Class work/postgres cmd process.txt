@@ -1,0 +1,22 @@
+>>psql --username=postgres
+  Password for user postgres:
+>>exit
+
+>>cd ../
+
+>>cd ../
+
+>>cd bin
+
+>>dir pg*
+
+>>cd ..
+
+>>cd pgAdmin*
+
+>>cd runtime
+
+>>psql --username="postgres"
+Password for user postgres:
+
+>>\c dvdrental      [database connectivity]

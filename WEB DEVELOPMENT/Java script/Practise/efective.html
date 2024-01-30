@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let std=["shakthi","nikil","partha","sivanesh"]
+    //forEach method: call another method for each another method
+        std.forEach((val,index)=>{
+            document.write(val+"," ,"<br>")
+            //document.write(`${index}.${val},`,"<br>")
+        });
+
+    //map method
+        let num=[1,20,34,4,5,67,8,99,7]
+        document.write(`the array is : ${num}`,"<br>")
+        let newnum=num.map((val)=>{
+            return val*2
+        })
+        document.write(`the multiply array is : ${newnum}`,"<br>")
+    
+    //every method
+        let num1=[1,23,34,4,5,67,8,99,7]
+        document.write(`the array is : ${num1}`,"<br>")
+        let newnum1=num1.every((val)=>{
+            return val<100
+        })
+        document.write(`all the value is <100 ? : ${newnum1}`,"<br>")
+
+    //filter method
+        let num2=[1,23,34,4,5,67,8,99,7]
+        let newnum2=num2.filter((val)=>{
+            return val >10 && val<27
+        })
+        document.write(`the filter value is : ${newnum2}`,"<br>")
+
+    //some 
+        let num3=[1,2,3,4,5,6,7,8,9]
+        let newnum3=num3.some((val)=>{
+            return val+108
+        })
+        document.write(`the sum of the value is : ${newnum3}`,"<br>")
+    
+    //reduce
+        let num4=[1,23,34,4,5,67,8,99,7]
+        let newnum4=num4.reduce((pre,next)=>{
+            return pre+next
+        })
+        document.write(`the reduce method is  : ${newnum3}`,"<br>")
+
+    //odd number by filter method
+    let a=[1,2,3,5,8,9,11,13,14,15,18,19,20,21,22,25]
+        let b=a.filter((val)=>{
+            return val%2!=0
+        })
+        document.write(`the odd number is: ${b} <br>`)
+    
+    //even number by filter method
+        let c=[1,2,3,5,8,9,11,13,14,15,18,19,20,21,22,25]
+        let d=c.filter((val)=>{
+            return val%2==0 
+        })
+        document.write(`the even number is: ${d} <br>`)
+
+    //arrays in object 
+        var emp=[{id:23,empname:"tham",empsal:35000,gender:"male"},
+        {id:22,empname:"nikhil",empsal:40000,gender:"female"},
+        {id:23,empname:"partha",empsal:45000,gender:"male"},
+        {id:24,empname:"sivanesh",empsal:20000,gender:"male"},
+        {id:25,empname:"karthick",empsal:50000,gender:"female"},
+        {id:26,empname:"vignesh",empsal:35000,gender:"male"},
+        {id:27,empname:"sara",empsal:10000,gender:"male"},
+        {id:28,empname:"santhosh",empsal:30000,gender:"female"},
+    ]
+    emp.forEach((val)=>{
+        document.write(`id is: ${val.id}, salary is : ${val.empsal} <br>`)
+    })
+
+    // filter the male canditates
+        let maledata=emp.filter((val)=>{
+        if (val.gender=="male"){
+            return (`id is : ${val.id}, nmae is : ${val.empname}`)
+        }
+    })
+    console.log(maledata)
+
+    // filter the female canditates
+    let femaledata=emp.filter((val1)=>{
+        if (val1.gender=="female"){
+            return `id is : ${val1.id}, nmae is : ${val1.empname}`;
+        }
+    })
+   console.log(femaledata)
+    </script>
+</body>
+</html>

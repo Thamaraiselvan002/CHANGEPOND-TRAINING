@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item1 { grid-area: header; 
+         background-color:#11630b;
+        border-radius: 4px;
+    }
+.item2 { 
+    grid-area: main;
+    background-color: #327ba8;
+    border-radius: 5px;
+}
+.item3 { grid-area: nav; 
+        background-color: #4343c4;
+        border-radius: 5px;
+    }
+.item4 { grid-area: article; 
+        background-color: #8c1f81; 
+        border-radius: 5px;
+    }
+.item5 { 
+    grid-area: footer; 
+    background-color: #3b363a;
+border-radius: 5px;
+}
+
+.grid-container {
+  display: grid;
+ grid-template-areas: 
+    'main  header header header header header '
+    'main nav nav nav nav nav'
+    'main article article article article article'
+    'main footer footer footer footer footer';
+  gap: 10px;
+  background-color: #e7ebee;
+  padding:10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size:30px;
+}
+#p{
+    text-align:justify;
+}
+</style>
+</head>
+<body>
+
+<h1>Grid Layout</h1>
+
+<div class="grid-container">
+  <div class="item1">Header</div>
+  <div class="item2">slide bar</div>
+  <div class="item3">nav</div>  
+  <div class="item4"><b>article</b><br> <p id="p">pilgrims between the mainland and Pamban. With the opening of the Pamban Bridge to 
+    the mainland in 1914, however,the businesses failed and the family fortune and properties were lost by the 1920s, 
+    apart from the ancestral home. </p >The family was poverty-stricken by the time Kalam was born. As a young boy he had.
+  </div>
+  <div class="item5">Footer</div>
+</div>
+
+</body>
+</html>
+
+

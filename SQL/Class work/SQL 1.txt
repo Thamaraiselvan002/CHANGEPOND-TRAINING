@@ -1,0 +1,148 @@
+for connect the mysql in cmd:
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p
+Enter password: ************
+
+>>desc table_name;  [give the structure of the table]
+
+mysql> select * from table_name;  [give the value of the table]
+
+mysql> select count (*) from table_name; [calculate the rows of the table]
+
+>> select now()  [give the current time of the system]
+
+mysql> select column_name,column_name,column_name from table_name;
+
+mysql> select truncate(1325.7868,2);
++-----------------------+
+| truncate(1325.7868,2) |  
++-----------------------+
+|               1325.78 |
++-----------------------+
+
+
+
+ >>>mysql> CREATE TABLE TRAINER(
+    ->      T_ID INT PRIMARY KEY,
+    ->      T_FNAME VARCHAR(45) NOT NULL,
+    ->      T_MNAME VARCHAR(45),
+    ->      T_LNAME VARCHAR(45) NOT NULL,
+    ->     T_DOB DATETIME NOT NULL,
+    ->     T_SALARY BIGINT (50) NOT NULL,
+    ->      T_ROLE VARCHAR(45),
+    ->     CREATED_DATE DATETIME DEFAULT CURRENT_TIMESTAMP,
+    ->     CREATED_BY VARCHAR(45),
+    ->     UPDATED_DATE DATETIME,
+    ->     UPDATED_BY VARCHAR(45)
+    ->     );
+
+
+>>>>mysql> DESC TRAINER;
++--------------+-------------+------+-----+-------------------+-------------------+
+| Field        | Type        | Null | Key | Default           | Extra             |
++--------------+-------------+------+-----+-------------------+-------------------+
+| T_ID         | int         | NO   | PRI | NULL              |                   |
+| T_FNAME      | varchar(45) | NO   |     | NULL              |                   |
+| T_MNAME      | varchar(45) | YES  |     | NULL              |                   |
+| T_LNAME      | varchar(45) | NO   |     | NULL              |                   |
+| T_DOB        | datetime    | NO   |     | NULL              |                   |
+| T_SALARY     | bigint      | NO   |     | NULL              |                   |
+| T_ROLE       | varchar(45) | YES  |     | NULL              |                   |
+| CREATED_DATE | datetime    | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+| CREATED_BY   | varchar(45) | YES  |     | NULL              |                   |
+| UPDATED_DATE | datetime    | YES  |     | NULL              |                   |
+| UPDATED_BY   | varchar(45) | YES  |     | NULL              |                   |
++--------------+-------------+------+-----+-------------------+-------------------+
+
+mysql> INSERT INTO TRAINER VALUES
+    -> (1,'SIVA','RAM' ,'KRISHNAN','2001-07-28',25678,'GET',CURRENT_TIMESTAMP,'THAMARAISELVAN',NULL,NULL),
+    -> (2,'SIVARAM','RAM' ,'KRISHNAN','1999-07-19',29678,'GET',CURRENT_TIMESTAMP,'THAMARAISELVAN',NULL,NULL);
+Query OK, 2 rows affected (0.06 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+>>>>>mysql> SELECT * FROM TRAINER
+    -> ;
++------+---------+---------+----------+---------------------+----------+--------+---------------------+----------------+--------------+------------+
+| T_ID | T_FNAME | T_MNAME | T_LNAME  | T_DOB               | T_SALARY | T_ROLE | CREATED_DATE        | CREATED_BY     | UPDATED_DATE | UPDATED_BY |
++------+---------+---------+----------+---------------------+----------+--------+---------------------+----------------+--------------+------------+
+|    1 | SIVA    | RAM     | KRISHNAN | 2001-07-28 00:00:00 |    25678 | GET    | 2023-10-12 15:17:11 | THAMARAISELVAN | NULL         | NULL       |
+|    2 | SIVARAM | RAM     | KRISHNAN | 1999-07-19 00:00:00 |    29678 | GET    | 2023-10-12 15:17:11 | THAMARAISELVAN | NULL         | NULL       |
++------+---------+---------+----------+---------------------+----------+--------+---------------------+----------------+--------------+------------+
+
+>>>>>>>mysql> SELECT MAX(T_SALARY),MIN(T_SALARY),SUM(T_SALARY) , FLOOR(AVG(T_SALARY)) FROM TRAINER;;
++---------------+---------------+---------------+----------------------+
+| MAX(T_SALARY) | MIN(T_SALARY) | SUM(T_SALARY) | FLOOR(AVG(T_SALARY)) |
++---------------+---------------+---------------+----------------------+
+|         50000 |         20000 |        125356 |                31339 |
++---------------+---------------+---------------+----------------------+
+
+>mysql> SELECT * FROM TRAINER ORDER BY T_SALARY;
++------+---------+---------+----------+---------------------+----------+--------+---------------------+----------------+--------------+------------+
+| T_ID | T_FNAME | T_MNAME | T_LNAME  | T_DOB               | T_SALARY | T_ROLE | CREATED_DATE        | CREATED_BY     | UPDATED_DATE | UPDATED_BY |
++------+---------+---------+----------+---------------------+----------+--------+---------------------+----------------+--------------+------------+
+|    3 | D       | RAM     | KRISHNAN | 2002-04-08 00:00:00 |    20000 | GET    | 2023-10-12 15:19:43 | THAMARAISELVAN | NULL         | NULL       |
+|    1 | SIVA    | RAM     | KRISHNAN | 2001-07-28 00:00:00 |    25678 | GET    | 2023-10-12 15:17:11 | THAMARAISELVAN | NULL         | NULL       |
+|    2 | SIVARAM | RAM     | KRISHNAN | 1999-07-19 00:00:00 |    29678 | GET    | 2023-10-12 15:17:11 | THAMARAISELVAN | NULL         | NULL       |
+|    4 | S       | P       | KRISHNAN | 1997-05-19 00:00:00 |    50000 | GET    | 2023-10-12 15:19:43 | THAMARAISELVAN | NULL         | NULL       |
++------+---------+---------+----------+---------------------+----------+--------+---------------------+----------------+--------------+------------+
+4 rows in set (0.00 sec)   
+
+ [ORDER BY MEANS ACSENDING ORDER LA VARUM]
+
+
+
+>>>>>>>mysql> SELECT * FROM TRAINER ORDER BY T_SALARY DESC;
++------+---------+---------+----------+---------------------+----------+--------+---------------------+----------------+--------------+------------+
+| T_ID | T_FNAME | T_MNAME | T_LNAME  | T_DOB               | T_SALARY | T_ROLE | CREATED_DATE        | CREATED_BY     | UPDATED_DATE | UPDATED_BY |
++------+---------+---------+----------+---------------------+----------+--------+---------------------+----------------+--------------+------------+
+|    4 | S       | P       | KRISHNAN | 1997-05-19 00:00:00 |    50000 | GET    | 2023-10-12 15:19:43 | THAMARAISELVAN | NULL         | NULL       |
+|    2 | SIVARAM | RAM     | KRISHNAN | 1999-07-19 00:00:00 |    29678 | GET    | 2023-10-12 15:17:11 | THAMARAISELVAN | NULL         | NULL       |
+|    1 | SIVA    | RAM     | KRISHNAN | 2001-07-28 00:00:00 |    25678 | GET    | 2023-10-12 15:17:11 | THAMARAISELVAN | NULL         | NULL       |
+|    3 | D       | RAM     | KRISHNAN | 2002-04-08 00:00:00 |    20000 | GET    | 2023-10-12 15:19:43 | THAMARAISELVAN | NULL         | NULL       |
++------+---------+---------+----------+---------------------+----------+--------+---------------------+----------------+--------------+------------+
+
+
+ [ORDER BY MEANS DESECENDING ORDER LA VARUM]
+
+
+>>>>mysql> SELECT CONCAT_WS (' ', T_FNAME,T_MNAME,T_LNAME) FROM TRAINER;
++------------------------------------------+
+| CONCAT_WS (' ', T_FNAME,T_MNAME,T_LNAME) |
++------------------------------------------+
+| SIVA RAM KRISHNAN                        |
+| SIVARAM RAM KRISHNAN                     |
+| D RAM KRISHNAN                           |
+| S P KRISHNAN                             |
++------------------------------------------+
+
+[CONCATE WITH THE NAMES]
+
+
+mysql> SELECT SUBSTRING_INDEX(INSTITUTE_NAME, ' ', 2) FROM INSTITUTE;
++-----------------------------------------+
+| SUBSTRING_INDEX(INSTITUTE_NAME, ' ', 2) |
++-----------------------------------------+
+| pentagon space                          |
+| Greens technologies                     |
+| q-spiders                               |
+| pentagon space                          |
+| q-spiders                               |
+| pentagon space                          |
+| q-spiders                               |
+| pentagon space                          |
+| q-spiders                               |
++-----------------------------------------+
+9 rows in set (0.00 sec)
+
+mysql> SELECT SUBSTRING_INDEX(INSTITUTE_NAME, ' ', 1) FROM INSTITUTE;
++-----------------------------------------+
+| SUBSTRING_INDEX(INSTITUTE_NAME, ' ', 1) |
++-----------------------------------------+
+| pentagon                                |
+| Greens                                  |
+| q-spiders                               |
+| pentagon                                |
+| q-spiders                               |
+| pentagon                                |
+| q-spiders                               |
+| pentagon                                |
+| q-spiders                               |

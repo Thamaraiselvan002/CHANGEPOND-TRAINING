@@ -1,0 +1,41 @@
+<div clas="container">
+    <div class="row" style="text-align: center;">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8" [ngStyle]="pricecss">
+            <input type="radio" name="menu" value="breakfast" 
+            (click)="setMenu('B')" 
+            /> Breakfast Menu &nbsp;&nbsp;
+            <input type="radio" name="menu" value="lunch"
+            (click)="setMenu('L')" /> Lunch Menu <br/>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8" *ngIf="isMenuchecked">
+            <ul class="list-group">
+                <li *ngFor="let mitem of menu" (click)="selectmenuitem(mitem)" class="list-group-item" 
+                [ngClass]="applyclassmenu" appHighlight textcolor="red" backgroundcolor="yellow"> {{mitem}}</li>
+            </ul>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <div [ngSwitch]="selectedMenuitem">
+                    <div *ngSwitchCase="'Idli'": >price:{{pricelistb[0]}}</div>
+                    <div *ngSwitchCase="'Dosa'": >price:{{pricelistb[1]}}</div>
+                    <div *ngSwitchCase="'Poori'": >price:{{pricelistb[2]}}</div>
+                    <div *ngSwitchCase="'Chole'": >price:{{pricelistb[3]}}</div>
+                    <div *ngSwitchCase="'Veg-Meals'": >price:{{pricelistl[0]}}</div>
+                    <div *ngSwitchCase="'Non-Veg Meals'": >price:{{pricelistl[1]}}</div>
+                    <div *ngSwitchCase="'Veg Biryani Combo'": >price:{{pricelistl[2]}}</div>
+                    <div *ngSwitchCase="'Chicken Biryani Combo'": >price:{{pricelistl[3]}}</div>
+                </div>
+
+            </div>
+            </div>
+    </div>
+</div>

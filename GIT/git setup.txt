@@ -1,0 +1,100 @@
+
+thamaraiselvan.s@CPDK060 MINGW64 ~/git/git demo (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/thamaraiselvan.s/git/git demo/.git/
+
+thamaraiselvan.s@CPDK060 MINGW64 ~/git/git demo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        demo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+thamaraiselvan.s@CPDK060 MINGW64 ~/git/git demo (master)
+$ git add demo.txt
+
+thamaraiselvan.s@CPDK060 MINGW64 ~/git/git demo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   demo.txt
+
+
+thamaraiselvan.s@CPDK060 MINGW64 ~/git/git demo (master)
+$ git commit -m "version 1"
+[master 95ba6de] version 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 demo.txt
+
+thamaraiselvan.s@CPDK060 MINGW64 ~/git/git demo (master)
+$ git log
+commit 95ba6de86774a8db66c6d42d8604dfd229ac9ca0 (HEAD -> master)
+Author: Thamaraiselvan002 <thamaraiselvankasi02@gmail.com>
+Date:   Mon Oct 9 18:04:42 2023 +0530
+
+    version 1
+
+commit b8d70cc58b4a91c6f8a1b9b2e5037ded3a2c4485
+Author: Thamaraiselvan002 <thamaraiselvankasi02@gmail.com>
+Date:   Mon Oct 9 17:22:06 2023 +0530
+
+    first version
+
+thamaraiselvan.s@CPDK060 MINGW64 ~/git/git demo (master)
+$ git add -A
+
+thamaraiselvan.s@CPDK060 MINGW64 ~/git/git demo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Screenshot (1).png
+
+
+thamaraiselvan.s@CPDK060 MINGW64 ~/git/git demo (master)
+$ git commit -m "version 2"
+[master de8f619] version 2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Screenshot (1).png
+
+thamaraiselvan.s@CPDK060 MINGW64 ~/git/git demo (master)
+$ git log
+commit de8f61960ef69fc36831e38671ef7e1acf46f448 (HEAD -> master)
+Author: Thamaraiselvan002 <thamaraiselvankasi02@gmail.com>
+Date:   Mon Oct 9 18:06:08 2023 +0530
+
+    version 2
+
+commit 95ba6de86774a8db66c6d42d8604dfd229ac9ca0
+Author: Thamaraiselvan002 <thamaraiselvankasi02@gmail.com>
+Date:   Mon Oct 9 18:04:42 2023 +0530
+
+    version 1
+
+commit b8d70cc58b4a91c6f8a1b9b2e5037ded3a2c4485
+Author: Thamaraiselvan002 <thamaraiselvankasi02@gmail.com>
+Date:   Mon Oct 9 17:22:06 2023 +0530
+
+    first version
+
+thamaraiselvan.s@CPDK060 MINGW64 ~/git/git demo (master)
+$ git reset --hard  de8f61960ef69fc36831e38671ef7e1acf46f448
+HEAD is now at de8f619 version 2
+
+thamaraiselvan.s@CPDK060 MINGW64 ~/git/git demo (master)
+$ git reset --hard  b8d70cc58b4a91c6f8a1b9b2e5037ded3a2c4485
+HEAD is now at b8d70cc first version
+
+thamaraiselvan.s@CPDK060 MINGW64 ~/git/git demo (master)
+$ git log
+commit b8d70cc58b4a91c6f8a1b9b2e5037ded3a2c4485 (HEAD -> master)
+Author: Thamaraiselvan002 <thamaraiselvankasi02@gmail.com>
+Date:   Mon Oct 9 17:22:06 2023 +0530
+
+    first version
+
+thamaraiselvan.s@CPDK060 MINGW64 ~/git/git demo (master)
+$
